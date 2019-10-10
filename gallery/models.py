@@ -19,14 +19,9 @@ class Image (models.Model):
     category = models.ForeignKey(Category)
     pub_date = models.DateTimeField(auto_now_add=True)
     image_image = models.ImageField(upload_to = 'images/')
-   
     @classmethod
-    def todays_news(cls):
-        today = dt.date.today()
-        news = cls.objects.filter(pub_date__date = today)
-        return news
-    @classmethod
-    def days_news(cls,date):
-        news = cls.objects.filter(pub_date__date = date)
-        return news
+    def get_all_images(cls):
+        image = cls.objects.all()
+        return image
+
     

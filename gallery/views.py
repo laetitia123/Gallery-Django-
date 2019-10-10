@@ -13,9 +13,9 @@ from .models import Image
 def welcome(request):
     return render(request, 'welcome.html')
 
-def news_today(request):
+def gallery(request):
     date = dt.date.today()
-    gallery = Image.todays_news()
+    gallery = Image.get_all_images()
     return render(request, 'all-gallery/today-gallery.html', {"date": date,"gallery":gallery})
 
 def convert_dates(dates):
