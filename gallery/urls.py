@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns=[
     # url('^$',views.welcome,name = 'welcome'),
     url(r'^$',views.gallery,name='newsToday'),
+    url(r'^search/', views.search_results, name='search_results')
     # url(r'^archives/(\d{4}-\d{2}-\d{2})/$',views.past_days_news,name = 'pastNews'),
 ]
 if settings.DEBUG:
