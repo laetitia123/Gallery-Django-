@@ -16,6 +16,8 @@ class Category(models.Model):
         ordering = ['category']
 class Location(models.Model):
     location= models.CharField(max_length =30)
+    
+    
    
     def __str__(self):
          return self.location
@@ -27,6 +29,7 @@ class Image (models.Model):
     location= models.ForeignKey(Location)
     pub_date = models.DateTimeField(auto_now_add=True)
     image_image = models.ImageField(upload_to = 'images/')
+    
     @classmethod
     def get_all_images(cls):
         image = cls.objects.all()
@@ -35,10 +38,11 @@ class Image (models.Model):
     def search_by_category(cls,search_term):
         image= cls.objects.filter(category__icontains=search_term)
         return image 
+    
     @classmethod
-    def get_image_by_location(cls,loc):
-        image = cls.objects.filter(location__loc__contains=loc).all()
-        return image
-
+    def filter_by_location(cls, id):
+       images = Image.objects.filter(location_id=id)
+       return images  
+       
 
     

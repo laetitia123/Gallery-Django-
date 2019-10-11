@@ -36,10 +36,12 @@ def image(request,image_id):
     except DoesNotExist:
         raise Http404()
     return render(request,"all-gallery/image.html", {"image":image})
-def get_image_by_location(request,loc):
-    image = Image.get_image_by_location(loc)
-   
-    return render(request, 'location.html', {"image": image})
+def filter_by_location(request,location_id):
+   """
+   Function that filters images by location
+   """
+   images = Image.filter_by_location(id=location_id )
+   return render (request,"all-gallery/location.html", {"images":images})
 
 
 # def single_image(request,image_id):
