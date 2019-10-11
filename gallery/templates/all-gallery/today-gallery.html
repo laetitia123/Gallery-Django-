@@ -13,11 +13,11 @@
     <!-- </div> -->
 <!--Display news Article images  -->
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <img src="{{gallery_item.image_image.url}}" class="img-responsive"  width="200" data-toggle="modal" data-target="#myModal"alt="Image">
+      <img src="{{gallery_item.image_image.url}}" class="img-responsive"  width="200" data-toggle="modal" data-target="#myModal{{gallery_item.id}}"alt="Image">
        <h2 class="text-center"> {{ gallery_item.post }} </h2>
        <p>Posted {{gallery_item.pub_date|timesince}} by {{gallery_item.editor.first_name}}</p>
   </div>
-  <div class="modal" id="myModal">
+  <div class="modal" id="myModal{{gallery_item.id}}">
         <div class="modal-dialog">
           <div class="modal-content">
           
