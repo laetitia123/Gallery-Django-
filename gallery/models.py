@@ -25,24 +25,26 @@ class Location(models.Model):
         ordering = ['location']
 class Image (models.Model):
     post = models.TextField()
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category ,db_column="category")
+
     location= models.ForeignKey(Location)
     pub_date = models.DateTimeField(auto_now_add=True)
     image_image = models.ImageField(upload_to = 'images/')
-    
+
     @classmethod
     def get_all_images(cls):
         image = cls.objects.all()
         return image
     @classmethod
     def search_by_category(cls,search_term):
-        image= cls.objects.filter(category__icontains=search_term)
+        image= cls.objects.filter(category__category__contains=search_term)
         return image 
     
     @classmethod
     def filter_by_location(cls, id):
        images = Image.objects.filter(location_id=id)
-       return images  
+       return images 
+     
        
 
     
