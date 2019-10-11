@@ -30,6 +30,22 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'all-gallery/search.html',{"message":message})
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"all-gallery/image.html", {"image":image})
+def get_image_by_location(request,loc):
+    image = Image.get_image_by_location(loc)
+   
+    return render(request, 'location.html', {"image": image})
+
+
+# def single_image(request,image_id):
+#     image=Image.objects.get(id = image_id)
+#     return render(request, 'image.html',{"image":image})
+
 def convert_dates(dates):
 
     # Function that gets the weekday number for the date.
