@@ -79,7 +79,7 @@ class Image (models.Model):
     
     @classmethod
     def filter_by_location(cls, id):
-       images = Image.objects.filter(location_id=id)
-       return images 
+       image= Image.objects.filter(location_id=id)
+       return image
      
        
