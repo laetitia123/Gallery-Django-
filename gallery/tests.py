@@ -51,14 +51,14 @@ class LocationTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.kigali,Location))
     
-#     def test_updating_location(self):
-#         location = Location.get_location_id(self.kigali.id)
-#         location.update_location('kigali')
-#         location = Location.get_location_id(self.kigali.id)
-#         self.assertTrue(location.location == 'kigali')
+    def test_updating_location(self):
+        location = Location.get_location_id(self.kigali.id)
+        location.update_location('kigali')
+        location = Location.get_location_id(self.kigali.id)
+        self.assertTrue(location.location == 'kigali')
     
-#     def tearDown(self):
-#         self.kigali.delete_location()
+    def tearDown(self):
+        self.kigali.delete_location()
 #         # ......................................test location model............
 # class CategoryTestClass(TestCase):
 #     def setUp(self):
