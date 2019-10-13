@@ -36,12 +36,12 @@ class ImageTestClass(TestCase):
        image = Image.objects.get(id=self.image.id)
        self.assertTrue(this_img, image)
 
-#    def test_filter_by_location(self):
+   def test_filter_by_location(self):
        
-#        self.image.save_image()
-#        this_img = self.image.filter_by_location(self.image.location_id)
-#        image = Image.objects.filter(location=self.image.location_id)
-#        self.assertTrue(this_img, image)
+       self.image.save_image()
+       this_img = self.image.filter_by_location(self.image.location_id)
+       image = Image.objects.filter(location=self.image.location_id)
+       self.assertTrue(this_img, image)
 # # ............................testing location model........................................
 # class LocationTestClass(TestCase):
 #     def setUp(self):
