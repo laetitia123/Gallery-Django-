@@ -14,9 +14,9 @@ def welcome(request):
     return render(request, 'welcome.html')
 
 def gallery(request):
-    date = dt.date.today()
+   
     gallery = Image.get_all_images()
-    return render(request, 'all-gallery/today-gallery.html', {"date": date,"gallery":gallery})
+    return render(request, 'all-gallery/today-gallery.html', {"gallery":gallery})
  
 def search_results(request):
 
