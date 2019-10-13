@@ -1,11 +1,7 @@
 
-
-# Blog-App
-
-
-## By Laetitia  Uwizeyimana
-
-## Description
+## Gallery-Django-
+### By Laetitia  Uwizeyimana
+### Description
 This is an application that will allow user to see my gallery  . A user can also be able to click on image to seethe deatails  use will be able to copy the link of image he/she has been clicked on
 This is Gallery App .   created on ,13 november 2019
 
