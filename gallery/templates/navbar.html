@@ -3,12 +3,13 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" style="height:100px;">
   <div class="container-fluid">
     <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'galleryToday' %}" style="text-transform:uppercase;">Home</a>
       <a class="navbar-brand" href="{% url 'galleryToday' %}" style="text-transform:uppercase;">Gallery</a>
     </div>
     <form class="navbar-form" role="search" action="{% url 'search_results' %}" style="margin-left:1000px;">
