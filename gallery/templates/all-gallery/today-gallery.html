@@ -12,10 +12,9 @@
       <!-- <h2 class="text-center"> {{ gallery_item.post }} </h2> -->
     <!-- </div> -->
 <!--Display news Article images  -->
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <img src="{{gallery_item.image_image.url}}" class="img-responsive"  width="200" data-toggle="modal" data-target="#myModal{{gallery_item.id}}"alt="Image">
-       <h2 class="text-center"> {{ gallery_item.post }} </h2>
-       <p>Posted {{gallery_item.pub_date|timesince}} by {{gallery_item.editor.first_name}}</p>
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <img src="{{gallery_item.image_image.url}}" class="img-responsive"  height="500" width="500" data-toggle="modal" data-target="#myModal{{gallery_item.id}}"alt="Image">
+       
   </div>
   <div class="modal" id="myModal{{gallery_item.id}}">
         <div class="modal-dialog">
@@ -23,9 +22,10 @@
           
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title">{{ gallery_item.post}}</h4>
               <img src="{{gallery_item.image_image.url}}" class="img-responsive"  width="500px" data-toggle="modal" data-target="#myModal"alt="Image">
-              <h4> Posted {{gallery_item.pub_date|timesince}} by {{gallery_item.editor.first_name}}</h4>
+              <h3 class="modal-title"> {{ gallery_item.name}}</h3>
+              <h4  class="modal-title">{{ gallery_item.description}}</h4>
+              <h4> Posted :{{gallery_item.pub_date|timesince}} </h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
@@ -39,7 +39,7 @@
 
   {% empty %}
   <div class="row">
-    <h2 class="text-center">There No News Items</h2>
+    <h2 class="text-center">There No Gallery Posted</h2>
   </div>
   {% endfor %}
 
