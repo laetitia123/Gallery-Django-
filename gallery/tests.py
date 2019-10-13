@@ -43,13 +43,13 @@ class ImageTestClass(TestCase):
        image = Image.objects.filter(location=self.image.location_id)
        self.assertTrue(this_img, image)
 # # ............................testing location model........................................
-# class LocationTestClass(TestCase):
-#     def setUp(self):
-#         self.kigali = Location(location='kigali')
-#         self.kigali.save_location()
+class LocationTestClass(TestCase):
+    def setUp(self):
+        self.kigali = Location(location='kigali')
+        self.kigali.save_location()
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.kigali,Location))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.kigali,Location))
     
 #     def test_updating_location(self):
 #         location = Location.get_location_id(self.kigali.id)
