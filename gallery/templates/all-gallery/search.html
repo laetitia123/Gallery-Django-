@@ -16,9 +16,11 @@
   {% if images %}
     {% for image in images %}
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <h1>{{image.post}}</h1>
-          <img src="{{image.image_image.url}}"  class="img-responsive"  height="500" width="500" data-toggle="modal" data-target="#myModal{{gallery_item.id}}"alt="Image">/>
-      </div>
+          
+          
+      <img src="{{image.image_image.url}}"  class="img-responsive"  height="500" width="500" data-toggle="modal" data-target="#myModal{{gallery_item.id}}"alt="Image">
+      <h1>{{image.post}}</h1>  
+    </div>
     {% endfor %}
   {% endif %}
   </div>
