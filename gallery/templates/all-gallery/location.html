@@ -3,13 +3,14 @@
 
 {% block content %}
 
-<h1>IMAGE BY LOCATION</h1>
+
 {% for image_item in images %}
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     
      <img src="{{image_item.image_image.url}}" data-toggle="modal" class="img-responsive" width="500" alt="Image" >
      <p> Category: {{image_item.category}}</p>
      <p> Name:{{image_item.name}}</p>
+     <p>Location:{{image_item.location}}</p>
     </div>
  </div>
  {% empty %}
