@@ -3,10 +3,15 @@
 
 
 <div class="container">
-    <h1>Location</h1>
- <button class="btn btn-success" ><a href="/location/1"  style="text-decoration:none;">kigali </a></button>
- <button class="btn btn-success" ><a href="/location/2" style ="text-decoration :none;" >usa </a></button>
-  <!-- Looping through news   -->
+  <blockquote>
+ <button class="btn btn-warning btn-lg outline"><a href="/location/1"  style="text-decoration:none;color:black;">kigali </a></button>
+ <button class="btn btn-warning btn-lg outline"><a href="/location/2" style ="text-decoration :none;color:black;" >usa </a></button>
+ <button class="btn btn-warning btn-lg outline"><a href="/location/3"  style="text-decoration:none;color:black;">Gisenyi </a></button>
+ <button class="btn btn-warning btn-lg outline"><a href="/location/4" style ="text-decoration :none;color:black;"" > Cyangugu</a></button>
+ <button class="btn btn-warning btn-lg outline"><a href="/location/1"  style="text-decoration:none;color:black;">canada</a></button>
+ <button class="btn btn-warning btn-lg outline"><a href="/location/2" style ="text-decoration :none;color:black;"" >Gatsata </a></button>
+</blockquote> 
+ <!-- Looping through news   -->
   <div class="row">
   {% for gallery_item in gallery %}
   
@@ -65,4 +70,39 @@
   alert("Copied the text: " + copyText.value);
 }
 </script>
+<style>
+  body {
+  background-color : #ecf0f1
+}
+.outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .25s;
+    width:150px;
+
+}
+.btn-primary.outline {
+    color: #428bca;
+}
+.btn-success.outline {
+    color: #5cb85c;
+}
+.btn-info.outline {
+    color: #5bc0de;
+}
+.btn-warning.outline {
+    color: #f0ad4e;
+}
+.btn-danger.outline {
+    color: #d9534f;
+}
+.btn-primary.outline:hover,
+.btn-success.outline:hover,
+.btn-info.outline:hover,
+.btn-warning.outline:hover,
+.btn-danger.outline:hover {
+    color: #fff;
+}
+</style>
+<footer style ="background-color:black;color:white; text-align:center;margin-top:50px;height:100px;"> copyrigth|Laetitia|All right reserved</footer>
 {% endblock %}
