@@ -60,14 +60,14 @@ class LocationTestClass(TestCase):
     def tearDown(self):
         self.kigali.delete_location()
 #         # ......................................test location model............
-# class CategoryTestClass(TestCase):
-#     def setUp(self):
-#         self.food = Category(category='food')
-#         self.food.save_category()
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.food = Category(category='food')
+        self.food.save_category()
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.food,Category))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.food,Category))
     
-#     def tearDown(self):
+    def tearDown(self):
         self.food.delete_category()
  
